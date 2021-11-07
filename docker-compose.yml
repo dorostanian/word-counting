@@ -7,7 +7,7 @@ services:
     volumes:
       - ./data:/home/data
     command:
-      - python word_count.py data/input.txt
+      - ./run.sh
 
 
   test:
@@ -15,7 +15,7 @@ services:
     restart: always
     command:
       - cd tests/
-      - python simple_testing.py
+      - ./test.sh
 
 volumes:
   data:
