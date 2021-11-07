@@ -54,5 +54,7 @@ class TextFile:
 if __name__ == '__main__':
     t = TextFile(path=sys.argv[1])
     t.tokenize()
-    print(t.get_total_count())
-    print(t.count_and_sort(sort_ascending=True))
+    total_words = t.get_total_count()
+    print(f"Number of words: {total_words}")
+    for word, count in t.count_and_sort(sort_ascending=True).items():
+        print(f"{word} {count}")

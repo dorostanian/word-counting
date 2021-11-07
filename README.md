@@ -21,3 +21,8 @@ docker-compose up run
 ```
 
 ### Tests
+
+
+
+### More?
+Depending on the infra choice we can add CI/CD integration and monitoring.
