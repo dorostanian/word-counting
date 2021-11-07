@@ -9,6 +9,8 @@ and our requirements. Some of the assumptions we are going to make:
 file is big and loading the whole text to the memory is not an option we could go for windowed reading solution
 or simply `chunked` data processing and then aggregating chunks results together. But for this task we assume
 that whole file can fit in memory at one go.
+- Input is a single file of text.
+- Output will be only printed on standard output.
 
 
 ### Usage
@@ -19,6 +21,9 @@ You need docker and docker-compose to run the solution.
 ```
 docker-compose up --build app 
 ```
+
+Currently input file is specified from `run.sh` script as an argument passed to the script which can be 
+modified for another path.
 
 ### Tests
 To run tests you can simply run 
