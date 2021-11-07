@@ -1,3 +1,4 @@
+import sys
 import re
 from typing import List, Dict
 from collections import Counter, OrderedDict
@@ -51,7 +52,7 @@ class TextFile:
 
 
 if __name__ == '__main__':
-    t = TextFile("../tests/test_file_1.txt")
+    t = TextFile(path=sys.argv[1])
     t.tokenize()
     print(t.get_total_count())
-    print(t.count_and_sort())
+    print(t.count_and_sort(sort_ascending=True))

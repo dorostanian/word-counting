@@ -11,12 +11,13 @@ or simply `chunked` data processing and then aggregating chunks results together
 that whole file can fit in memory at one go.
 
 
-### Tests
-
-
-
 ### Usage
 
 Our solution is dockerized to make it easy for deployment on different types of infrastructures.
 You need docker and docker-compose to run the solution.
 
+```
+docker-compose up run
+```
+
+### Tests

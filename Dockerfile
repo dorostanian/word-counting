@@ -1,6 +1,8 @@
 FROM python:3.8.10
 
-COPY . /home
+COPY ./count_it /home/
+COPY ./requirements.txt /home/requirements.txt
+COPY ./tests /home/tests
 
 WORKDIR /home
 
