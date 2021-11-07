@@ -16,3 +16,6 @@ services:
     command:
       - cd tests/
       - python simple_testing.py
+
+volumes:
+  data:
