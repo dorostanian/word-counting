@@ -24,7 +24,7 @@ class TextFile:
         return self._total_count
 
 
-    def _custom_sort(self, _words_list: List[str], sort_ascending: bool) -> Dict[str, int]:
+    def _custom_sort(self, _words_list: List[str], sort_ascending: bool) -> List[str]:
         for i in range(len(_words_list) - 1):
             for j in range(i + 1, len(_words_list)):
                 if sort_ascending:
