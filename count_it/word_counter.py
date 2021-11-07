@@ -14,15 +14,16 @@ class TextFile:
         self._path = path
 
     def tokenize(self):
-        with open(self._path, 'r') as f:
+        with open(self._path, "r") as f:
             text = f.read()
-            regex = r'\b\w+\b'
-            self._all_words = [w.lower() for w in re.findall(regex, text) if w.isalpha()]
+            regex = r"\b\w+\b"
+            self._all_words = [
+                w.lower() for w in re.findall(regex, text) if w.isalpha()
+            ]
             self._total_count = len(self._all_words)
 
     def get_total_count(self):
         return self._total_count
-
 
     def _custom_sort(self, _words_list: List[str], sort_ascending: bool) -> List[str]:
         for i in range(len(_words_list) - 1):
@@ -41,17 +42,24 @@ class TextFile:
         return _words_list
 
     def count_and_sort(self, sort_ascending: bool = True) -> OrderedDict:
-        words_count: Counter[str] = Counter(self._all_words) # we could also count ourselves using a dict incrementing a counter by iterating over the words
-        self._sorted_words_dict: OrderedDict =  OrderedDict(({
-                word: words_count[word]
-                for word in self._custom_sort(list(words_count.keys()), sort_ascending)
-            }).items())
+        words_count: Counter[str] = Counter(
+            self._all_words
+        )  # we could also count ourselves using a dict incrementing a counter by iterating over the words
+        self._sorted_words_dict: OrderedDict = OrderedDict(
+            (
+                {
+                    word: words_count[word]
+                    for word in self._custom_sort(
+                        list(words_count.keys()), sort_ascending
+                    )
+                }
+            ).items()
+        )
 
         return self._sorted_words_dict
 
 
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     t = TextFile(path=sys.argv[1])
     t.tokenize()
     total_words = t.get_total_count()
