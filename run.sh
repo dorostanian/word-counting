@@ -1,3 +1,3 @@
 #!/bin/bash
 ls -la
-python3 word_count.py data/input.txt
+python3 word_counter.py data/input.txt
