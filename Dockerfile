@@ -2,7 +2,7 @@ FROM python:3.8.10
 
 COPY ./count_it /home/count_it/
 COPY ./requirements.txt /home/requirements.txt
-COPY ./tests /home/tests
+COPY ./tests /home/
 COPY ./run.sh /home/run.sh
 COPY ./test.sh /home/test.sh
 
