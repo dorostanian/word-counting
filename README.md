@@ -17,12 +17,15 @@ Our solution is dockerized to make it easy for deployment on different types of 
 You need docker and docker-compose to run the solution.
 
 ```
-docker-compose up run
+docker-compose up --build app 
 ```
 
 ### Tests
+To run tests you can simply run 
 
-
+```
+docker-compose up --build test
+```
 
 ### More?
 Depending on the infra choice we can add CI/CD integration and monitoring.
