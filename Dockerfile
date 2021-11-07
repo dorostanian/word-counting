@@ -1,6 +1,6 @@
 FROM python:3.8.10
 
-COPY ./count_it /home/
+COPY ./count_it /home/count_it/
 COPY ./requirements.txt /home/requirements.txt
 COPY ./tests /home/tests
 COPY ./run.sh /home/run.sh
