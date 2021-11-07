@@ -14,7 +14,6 @@ services:
     build: .
     restart: always
     command:
-      - cd tests/
       - ./test.sh
 
 volumes:
